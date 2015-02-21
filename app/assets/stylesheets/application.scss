@@ -1,0 +1,102 @@
+@import "foundation_and_overrides";
+@import url("//fonts.googleapis.com/css?family=Roboto:400,700,300|Press+Start+2P");
+
+
+//fonts
+.name {
+  font-family: 'Press Start 2P', cursive;
+  color: #FFFF00;
+}
+
+p {
+font-family: 'Roboto', sans-serif;
+weight: 300;
+}
+
+
+
+#nav {
+  font-family: 'Roboto', sans-serif;
+  weight: 500;
+}
+
+
+
+
+
+
+
+
+
+/*a {*/
+  /*color: #F41C54;*/
+/*}*/
+
+label {
+  font-family: 'Roboto', sans-serif;
+  color: #FF9F00;
+  weight: 100;
+}
+
+.left_padding {
+  padding-left: 1em;
+}
+
+.small_top_padding {
+  padding-top: 5em;
+}
+
+.medium_top_padding {
+  padding-top: 7em;
+}
+
+.big_top_padding {
+  padding-top: 15px;
+}
+
+.mario {
+  list-style-image: image-url('mario_mushroom.png');
+  width: auto;
+  height: auto;
+  font-family: 'Press Start 2P', cursive;
+  color: #FF9F00;
+  padding-right: 3em;
+}
+.star {
+  list-style-image: image-url('mario_star.png');
+  width: auto;
+  height: auto;
+  font-family: 'Press Start 2P', cursive;
+  color: #FF9F00;
+  padding-right: 3em;
+  padding-bottom: 2.5em;
+}.task {
+  font-family: 'Press Start 2P', cursive;
+  color: #A8BF12;
+  padding-right: 3em;
+  list-style: none;
+  line-height: 4em;
+}
+.complete {
+  font-family: 'Press Start 2P', cursive;
+  font-size: .75em;
+  text-decoration: line-through;
+  color: #FF9F00;
+}
+.status {
+  list-style-image: image-url('mario_mushroom.png');
+  font-family: 'Roboto', sans-serif;
+  weight: 100;
+  color: #00AAB5;
+}
+.reopen {
+  font-family: 'Roboto', sans-serif;
+  font-size: .75em;
+  padding-left: 5em
+  a {
+    color: #A8BF12;
+  }
+}
+.span {
+  display: inline;
+}

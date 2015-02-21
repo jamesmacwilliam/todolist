@@ -1,0 +1,11 @@
+.row
+  .small-12.column
+    %h3.name BUSINESS TO TAKE CARE OF (updating)
+    = simple_form_for @project,
+      :url => url_for(:action => 'update', :controller => 'projects'),
+      :method => 'put' do |f|
+      = f.input :title, :required => true
+      = f.input :note, as: :text
+      = f.hidden_field :user_id, :value => current_user.id
+
+      = f.button :submit, 'Update this!', :class => "round small button"

@@ -1,0 +1,15 @@
+.row
+  .small-12.column
+    %h2.name= "#{current_user.email} PROJECTS"
+    .small-3.column
+    .small-9.column.small_top_padding
+      - unless @projects.nil?
+        %ul.mario
+          - @projects.each do |project|
+            %li.mario
+              = link_to project.title, edit_project_path(project.id)
+              = link_to '(TASKS)', project_tasks_path(project.id)
+
+  .small-12.column.big_top_padding
+    .small-6.column
+      %h4= link_to 'NEW PROJECT', new_user_project_path(current_user.id)

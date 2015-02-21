@@ -1,0 +1,23 @@
+.row
+  .small-12.column
+    %h2.name= "#{@project.title} TASKS TO COMPLETE"
+    .small-2.column
+    .small-9.column.small_top_padding  
+      - unless @tasks.nil?
+        %ul.task
+        - @tasks.each do |task|
+          %li.task
+            = task.title
+            - if !task.completed?
+              = link_to 'mark this complete!', complete_task_path(task), class: 'status', method: :put, completed: true
+            - if task.completed?
+              %li.star
+                %span.complete= 'donezo!'
+                %span.reopen= link_to '[ j/k! need to do again! ]', complete_task_path(task), method: :put, completed: false
+
+
+  .small-12.column.big_top_padding
+    .small-6.column
+      %h4= link_to 'NEW TASK', new_project_task_path(params[:project_id])
+    .small-6.column
+      %h4= link_to 'BACK TO PROJECTS', user_projects_path(current_user.id)

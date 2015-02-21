@@ -1,0 +1,9 @@
+.row
+  .small-12.column
+    %h3.name TAKING CARE OF (your) BUSINESS
+    = form_tag log_me_in_path do
+      = label_tag :email
+      = text_field_tag :email
+      = label_tag :password
+      = password_field_tag :password
+      = submit_tag 'Let\'s Do This!',:class => "round small button"

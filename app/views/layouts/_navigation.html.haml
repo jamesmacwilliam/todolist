@@ -1,0 +1,7 @@
+%nav.top-bar#nav{ data: { topbar: "" }, role: "navigation" }
+  %ul.title-area
+    %li.left_padding= link_to 'Home', root_path
+    %li.toggle-topbar.menu-icon
+      %a{href: "#"} Menu
+  .top-bar-section
+    %ul.right= render 'layouts/navigation_links'
