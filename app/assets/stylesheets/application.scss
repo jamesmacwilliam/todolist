@@ -5,7 +5,20 @@
 //fonts
 .name {
   font-family: 'Press Start 2P', cursive;
-  color: #FFFF00;
+  color: #F41C54;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.clickable:hover {
+  cursor:pointer;
+  opacity: 0.5;
 }
 
 p {
@@ -28,9 +41,9 @@ weight: 300;
 
 
 
-/*a {*/
-  /*color: #F41C54;*/
-/*}*/
+a {
+  color: #F41C54;
+}
 
 label {
   font-family: 'Roboto', sans-serif;

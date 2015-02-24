@@ -20,4 +20,22 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  session:
+    head: "Taking Care of (your) Business"
+    submit: "Let's Do This!"
+  page:
+    title: "Todo"
+  meta:
+    desc: "We help you stay super duper organized and on top of things."
+    name: "TAKIN CARE OF BUSINESS"
+  tasks:
+    error: "Doh! Try again!"
+    create: "A new task lives!"
+    complete: "Task complete!"
+    update: "Task updated!"
+    destroy: "Your task has been buh-leted!"
+  projects:
+    error: "Doh! Try again!"
+    create: "Your lives!"
+    update: "Your project has been updated!"
+    destroy: "Your project has been buh-leted!"

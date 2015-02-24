@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       flash[:success] = "Welcome back, #{user.email}"
-      redirect_to user_projects_path(user.id)
+      redirect_to root_path
     else
       flash[:alert] = "There was a problem logging you in."
       redirect_to log_in_path

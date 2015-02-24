@@ -45,7 +45,7 @@
 $font-weight-bold: 500;
 
 // We use these to control various global styles
- $body-bg: #999999;
+ $body-bg: #D9D9D9;
 // $body-font-color: #222;
 $body-font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -60,9 +60,9 @@ $body-font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #FFFF00;
-$secondary-color: #990033;
-$alert-color: #990033;
+$primary-color: #FF9F00;
+$secondary-color: #F41C54;
+$alert-color: #F41C54;
 $success-color: #A8BF12;
 $warning-color: #CC0015;
 // $info-color: #a0d3e8;
@@ -1186,7 +1186,7 @@ $button-font-weight: $font-weight-bold;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
- $topbar-bg-color: #330033;
+ $topbar-bg-color: #6600CC;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1207,7 +1207,7 @@ $topbar-margin-bottom: 4rem;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #990033;
+$topbar-link-color: #F41C54;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;

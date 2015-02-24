@@ -1,15 +1,7 @@
 class Project < ActiveRecord::Base
 
   belongs_to :user
-  has_many :tasks, dependent: :destroy
-  validates_presence_of :title
+  has_many   :tasks, dependent: :destroy
+  validates  :title, presence: true, uniqueness: true
 
-  def new
-  end
-
-  def create
-  end
-
-  def destroy
-  end
 end

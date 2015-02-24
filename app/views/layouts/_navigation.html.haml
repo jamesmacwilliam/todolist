@@ -4,4 +4,9 @@
     %li.toggle-topbar.menu-icon
       %a{href: "#"} Menu
   .top-bar-section
-    %ul.right= render 'layouts/navigation_links'
+    %ul.right
+      - if current_user
+        %li= link_to 'Log Out', log_me_out_path
+      - else
+        %li= link_to 'Log In', log_in_path
+        %li= link_to 'I\'m New', new_user_path

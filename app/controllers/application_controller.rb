@@ -1,8 +1,12 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-  before_filter :require_login
+  inherit_resources
 
-  helper_method :current_user
+  protect_from_forgery with: :exception
+  before_filter        :require_login
+  respond_to           :json
+  actions              :all
+
+  helper_method        :current_user
 
   def require_login
     unless current_user

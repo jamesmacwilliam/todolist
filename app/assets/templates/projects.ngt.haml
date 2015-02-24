@@ -1,0 +1,28 @@
+%table
+  %thead
+    %tr
+      %th Project
+  %tbody
+    %tr
+      %td
+        %a.button.round.tiny{ ng: { if: '!mCtrl.new_project',
+        click: 'mCtrl.new_project = true; mCtrl.project = {}' } } +
+
+        %todo-form{ model: "mCtrl.project",
+          show: 'mCtrl.new_project',
+          submit: 'mCtrl.saveProject' }
+
+    %tr{ ng: { repeat: "project in mCtrl.projects" } }
+      %td
+        %todo-form{ model: 'project',
+          show: 'mCtrl.projectFormVisible(project)',
+          submit: 'mCtrl.saveProject' }
+
+        .div.clickable{ ng: { click: "mCtrl.showProjectForm(project)",
+        show:  '!mCtrl.projectFormVisible(project)',
+        class: "mCtrl.projectClass(project)",
+        'attr-popover' => '{{ project.note }}' },
+        'popover-delay' => '250',
+        'popover-animation' => 'true',
+        'popover-trigger' => 'mouseenter' }
+          {{ project.title }}

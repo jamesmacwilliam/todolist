@@ -1,17 +1,20 @@
 !!!
-%html
+%html{'ng-app' => 'todo.main' }
   %head
-    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
-    %title= content_for?(:title) ? yield(:title) : "Rails Foundation"
-    %meta{content: content_for?(:description) ? yield(:description) : "We help you stay super duper organized and on top of things.", name: "TAKIN CARE OF BUSINESS"}/
-    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    = stylesheet_link_tag "application", 'http://fonts.googleapis.com/css?family=Roboto:400,700,300|Press+Start+2P)'
+    %meta{ content: "width=device-width, initial-scale=1.0", name: "viewport" }/
+    %title= yield?(:title, I18n.t("page.title"))
+    %meta{ content: yield?(:description, I18n.t("meta.desc")),
+    name: I18n.t("meta.name") }/
+    = stylesheet_link_tag "application", media: "all",
+      "data-turbolinks-track" => true
+    = stylesheet_link_tag "application",
+      "http://fonts.googleapis.com/css?family=Roboto:400,700,300|Press+Start+2P)"
     = favicon_link_tag
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %header= render 'layouts/navigation'
-    %main{role: "main"}
-      = render 'layouts/messages'
+    %header= render "layouts/navigation"
+    %main{ role: "main" }
+      = render "layouts/messages"
       = yield

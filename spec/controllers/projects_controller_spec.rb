@@ -28,7 +28,7 @@ describe ProjectsController do
 
     describe "GET index" do
       before do
-        get :index
+        get :index, format: :json
       end
 
       it "succeeds" do
@@ -42,7 +42,7 @@ describe ProjectsController do
 
     describe "GET new" do
       it "can create a new project" do
-        get :new
+        get :new, format: :json
         expect(response).to be_success
       end
     end

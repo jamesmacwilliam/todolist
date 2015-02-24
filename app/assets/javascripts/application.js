@@ -10,10 +10,28 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//  External ----------------------------
+//
 //= require jquery
 //= require jquery_ujs
+//= require angular
 //= require foundation
 //= require turbolinks
-//= require_tree .
+//= require i18n
+//= require i18n/translations
+//
+//= require ng-rails-csrf
+//= require angular-resource
+//= require angular-mm-foundation-tpls
+//
+//= require app
+//= require_tree ../templates
+//= require_tree ./entities
+//= require_tree ./directives
+//= require_tree ./controllers
+//
+//
+//  Internal ----------------------------
+//
 
 $(document).foundation();

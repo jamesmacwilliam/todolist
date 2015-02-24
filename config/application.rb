@@ -8,6 +8,22 @@ Bundler.require(*Rails.groups)
 
 module Tcob
   class Application < Rails::Application
+
+    config.assets.precompile.shift
+
+    # Register asset extensions for angular
+    #
+    config.assets.precompile.push(Proc.new do |path|
+      File.extname(path).in? %w[
+      .html .erb .haml .png .gif .jpg .jpeg .svg
+      ]
+    end)
+
+    config.angular_html2js.module_name = 'todo.main'
+
+    # For Foundation 5
+    config.assets.precompile += %w[ vendor/modernizr favicon.ico ]
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

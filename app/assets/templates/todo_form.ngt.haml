@@ -1,0 +1,8 @@
+%form{ 'ng-if' => 'show()', 'ng-submit' => 'submit(model)' }
+  %fieldset
+    %legend {{ title() }}
+    %label Title
+    %input{ type: 'text', 'ng-model' => 'model.title' }
+    %label Note
+    %input{ type: 'text', 'ng-model' => 'model.note' }
+    %button{type: 'submit'} Save

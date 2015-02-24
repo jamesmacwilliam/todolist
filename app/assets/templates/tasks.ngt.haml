@@ -1,0 +1,32 @@
+%table
+  %thead
+    %tr
+      %th{ colspan: '2' } {{mCtrl.project.title }}: Tasks
+  %tbody
+    %tr
+      %td{ colspan: '2' }
+        %a.button.round.tiny{ ng: { if: '!mCtrl.new_task',
+        click: 'mCtrl.new_task = true; mCtrl.showTaskForm({})' } } +
+
+        %todo-form{ model: "mCtrl.task",
+          show: 'mCtrl.new_task',
+          submit: 'mCtrl.saveTask' }
+
+    %tr{ ng: { repeat: "task in mCtrl.tasks" } }
+      %td
+        %todo-form{ model: 'task',
+          show: 'mCtrl.task.id == task.id',
+          submit: 'mCtrl.saveTask' }
+
+        .div.clickable{ ng: { class: "{ strike: task.completed }",
+        click: "mCtrl.showTaskForm(task)",
+        show: '!(mCtrl.task.id == task.id)',
+        'attr-popover' => '{{ task.note }}'},
+        'popover-delay' => '250',
+        'popover-animation' => 'true',
+        'popover-trigger' => 'mouseenter' }
+          {{ task.title }}
+
+      %td
+        %a.button.round.tiny{ ng: { if: '!task.completed',
+        click: 'mCtrl.completeTask(task)' } } &#x2713;

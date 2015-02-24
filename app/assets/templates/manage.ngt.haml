@@ -1,0 +1,6 @@
+.row
+  .large-6.columns
+    %ng-include{ src: "'projects'" }
+
+  .large-6.columns{ 'ng-show' => 'mCtrl.project.id' }
+    %ng-include{ src: "'tasks'" }
